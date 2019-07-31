@@ -1,0 +1,1009 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #efefef
+  opacity: 1
+
+*:-moz-placeholder
+  color: #efefef
+  opacity: 1
+
+*::-moz-placeholder
+  color: #efefef
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #efefef
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #efefef
+
+body input:required:valid,
+body textarea:required:valid
+  color: #efefef
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  height: 100%
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  background: $bg no-repeat
+    size: cover
+  color: #efefef
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+strong
+  font-weight: 700
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+
+button, textarea, input, select
+  outline: none
+  border: none
+    radius: 0
+  transition: .3s ease
+  cursor: pointer
+  font-size: 16px
+  font-family: $default-font
+
+textarea, input, select
+  color: #efefef
+
+h1
+  color: #efefef
+  font-size: 52px
+  text-transform: uppercase
+  font-family: 'ttnorms-eb', sans-serif
+
+h2
+  color: $title
+  text-transform: uppercase
+  font-size: 44px
+  font-family: 'ttnorms-eb', sans-serif
+
+h4
+  color: $border
+  font-size: 21px
+  font-family: 'ttnorms-b', sans-serif
+
+iframe
+  width: 100%
+  height: 100%
+
+
+.container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  position: relative
+  width: 1280px
+  margin: 0 auto
+  padding: 0 15px
+  box-sizing: border-box
+
+.logo
+  font-size: 36px
+  color: #efefef
+  font-family: $default-font
+  padding: 52px 54px 47px 0
+  position: relative
+  span
+    font-family: 'ttnorms-b', sans-serif
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -1px
+    width: 100%
+    height: 1px
+    background: $border
+
+.section-title
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-end
+  flex-wrap: wrap
+
+.btn-accent
+  color: #efefef
+  font-family: 'ttnorms-eb', sans-serif
+  font-size: 18px
+  box-shadow: 1px 5px 7px 1px rgba(21, 32, 50, 0.14)
+  border-radius: 23px
+  background-image: $btn-bg
+  position: relative
+  text-align: center
+  box-sizing: border-box
+  display: flex
+  align-items: center
+  justify-content: center
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(-30deg, $border 0%, #ff854c 100%)
+    opacity: 0
+    transition: .4s ease-out
+    border-radius: 23px
+  &:hover
+    &:after
+      opacity: 1
+  .wrapper
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    z-index: 1
+    position: relative
+    padding: 12px 25px
+    box-sizing: border-box
+  .icon
+    margin: 0 18px 0 0
+
+.btn-default
+  font-size: 18px
+  position: relative
+  color: #efefef
+  font-family: 'ttnorms-eb', sans-serif
+  text-align: center
+  border-radius: 23px
+  box-shadow: 1px 5px 7px 1px rgba(21, 32, 50, 0.14)
+  width: 288px
+  box-sizing: border-box
+  .wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    z-index: 1
+    padding: 12px
+    border-radius: 23px
+    background: #152338
+    transition: .3s ease
+  &:before
+    content: ''
+    position: absolute
+    left: -2px
+    top: -2px
+    width: calc(100% + 4px)
+    height: calc(100% + 4px)
+    background-image: $btn-bg
+    border-radius: 23px
+    z-index: 1
+  &:hover
+    .wrapper
+      background: transparent
+
+
+
+.slick-arrow
+  width: 13px
+  height: 11px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    background: url("../img/arrow-right-white.png") no-repeat center
+      size: contain
+    width: 100%
+    height: 100%
+    opacity: 0.41
+    transition: .3s ease
+.slick-prev
+  &:before
+    transform: rotate(180deg)
+.slick-next
+  right: 0
+  top: 0
+  transform: translate(0)
+  position: relative
+.slick-prev
+  left: 0
+  top: 0
+  transform: translate(0)
+  position: relative
+
+.slider-nav
+  position: relative
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: flex-start
+  height: auto
+  margin: 65px 0 71px
+  .slick-next
+    order: 2
+  .slick-dots
+    position: relative
+    margin: 0 20px
+
+.our-customers-arrows, .sentence-arrows
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  margin: 0 0 17px
+  .slick-next
+    margin: 0 0 0 120px
+
+.our-customers-arrows
+  .slick-arrow
+    &:before
+      background: url("../img/arrow-right.png") no-repeat center
+
+
+.slick-dots
+  bottom: 0
+  width: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  li.slick-active
+    button
+      &:before
+        background-color: $border
+        opacity: 1
+        border-color: $border
+  li
+    width: 14px
+    height: 14px
+    margin: 0 3px
+    box-sizing: border-box
+    button
+      width: 14px
+      height: 14px
+      padding: 0
+      &:before
+        width: 14px
+        height: 14px
+        content: ''
+        opacity: .28
+        background: transparent
+        box-sizing: border-box
+        border: 2px solid #efefef
+          radius: 50%
+        transition: .3s ease
+
+.slick-next.slick-disabled:before, .slick-prev.slick-disabled:before
+  opacity: .11
+
+.slide
+  outline: none
+
+
+
+
+//header
+header
+  border-bottom: 1px solid rgba(#fefefe, .11)
+  .container
+    justify-content: space-between
+    align-items: center
+    .phone
+      margin: 0 74px 0 0
+
+.header-box
+  p
+    font-family: 'ttnorms-m', sans-serif
+    font-size: 16px
+
+.list-shedule
+  display: flex
+  flex-direction: column
+  li
+    display: flex
+    flex-direction: row
+    font-size: 14px
+    font-family: 'ttnorms-l', sans-serif
+    margin: 0 0 9px
+    &:last-child
+      margin: 0
+    span
+      width: 52px
+
+.schedule
+  display: flex
+  flex-direction: row
+  align-items: center
+  flex-wrap: wrap
+  p
+    margin: 0 23px 0 0
+
+.box-mail
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  .mail
+    font-size: 14px
+    color: #efefef
+    font-family: 'ttnorms-l', sans-serif
+    margin: 12px 0 0 0
+
+.list-social
+  display: flex
+  flex-direction: row
+  align-items: center
+  li
+    a
+      margin: 0 3px
+
+//section main
+.main
+  .container
+    flex-direction: column
+  h1
+    margin: 110px 0 59px
+    max-width: 687px
+
+.main__slider
+  position: absolute
+  right: 15px
+  top: 0
+  width: 511px
+  box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.23)
+
+
+
+.slick-dotted.slick-slider
+  margin: 0
+
+.line-sentence
+  box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.14)
+  background-color: rgba(#0d1420, .62)
+  margin: 0 0 35px
+  .container
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    padding: 50px 15px 39px
+
+.list-sentence
+  display: flex
+  flex-direction: row
+  align-items: center
+  li
+    position: relative
+    text-transform: uppercase
+    color: #efefef
+    font-size: 17px
+    max-width: 90px
+    margin: 0 86px 0 0
+    box-sizing: border-box
+    &:last-child
+      margin: 0
+      &:before
+        display: none
+    &:before
+      content: ''
+      position: absolute
+      background-color: $border
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      top: 50%
+      transform: translate(0,-50%)
+      right: -51px
+
+
+//section our-customers
+.our-customers
+  background-color: #ffffff
+  padding: 93px 0 117px
+  .section-title
+    margin: 0 0 92px
+    h2
+      max-width: 235px
+
+.our-customers__slider
+  width: 100%
+  .slick-track
+    display: flex
+    align-items: center
+    justify-content: center
+
+.logo-customers
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 auto
+
+
+//section sentence
+.sentence
+  padding: 112px 0 108px
+  border-bottom: 1px solid rgba(#fff, .1)
+  .container
+    flex-direction: column
+    width: 1370px
+    h2
+      width: 345px
+      color: #fff
+    .section-title
+      margin: 0 auto 74px
+      width: 1280px
+      padding: 0 15px
+    .btn-accent
+      margin: 117px auto 0
+
+
+.sentence__slider-box
+  position: relative
+  display: flex
+  flex-direction: column
+  box-shadow: 0 0 7px 1px rgba(21, 32, 50, 0.14)
+  background-color: $box-bg
+  padding: 74px 51px
+  width: 335px
+  box-sizing: border-box
+  overflow: hidden
+  margin: 0 auto
+  h4
+    margin: 0 0 15px
+  .description
+    color: #828282
+    p
+      font-family: 'ttnorms-l', sans-serif
+      margin: 0 0 20px
+      &:last-child
+        margin: 0
+  .number
+    position: absolute
+    bottom: -7px
+    right: -7px
+    color: $number
+    font-size: 100px
+    font-family: 'ttnorms-b', sans-serif
+    opacity: 0.25
+
+
+.sentence__slider
+  .slide
+    &:nth-child(even)
+      .sentence__slider-box
+        background-color: #121c2d
+        box-shadow: 0 0 5px 3px rgba(0, 1, 1, 0.17)
+        margin: 31px auto 0
+    &:nth-child(odd)
+      .sentence__slider-box
+        &:after
+          content: ''
+          position: absolute
+          right: -15px
+          top: 104px
+          box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.23)
+          width: 38px
+          height: 38px
+          border-radius: 50%
+          background-color: #ff854c
+    &:nth-child(4n+3)
+      .sentence__slider-box
+        &:after
+          background-color: $border
+          top: 56px
+          right: -11px
+
+
+//section advantages
+.advantages
+  padding: 117px 0
+  .container
+    flex-direction: column
+    h2
+      color: #fff
+      margin: 0 0 126px
+
+.advantages__wrapper
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: flex-start
+
+.advantages__box
+  display: flex
+  flex-direction: row
+  width: 50%
+  margin: 0 0 46px 0
+  border-right: 1px solid rgba(#fff, .07)
+  .number
+    background-color: $border
+    width: 42px
+    height: 42px
+    min-width: 42px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #efefef
+    border-radius: 50%
+    font-size: 24px
+    text-transform: uppercase
+    font-family: 'ttnorms-m', sans-serif
+    margin: 0 40px 0 0
+  &:last-child, &:nth-last-child(2)
+    margin: 0
+    .advantages__box-text
+      &:before
+        display: none
+  &:nth-child(2), &:nth-child(3), &:last-child
+    .number
+      background-color: $number2
+  &:nth-child(even)
+    border: none
+    padding: 0 0 0 64px
+    .advantages__box-text
+      margin: 0
+
+.advantages__box-text
+  display: flex
+  flex-direction: column
+  margin: 0 101px 0 0
+  position: relative
+  padding: 0 0 48px 0
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 1px
+    background: rgba(#fff, .13)
+  h4
+    font-size: 24px
+    text-transform: uppercase
+    font-family: 'ttnorms-m', sans-serif
+    color: #efefef
+    margin: 0 0 35px 0
+  .description
+    color: #efefef
+    font-size: 18px
+    position: relative
+
+//section payments
+.payments
+  background-color: $box-bg
+  padding: 0 0 73px
+  .container
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    h2
+      color: #efefef
+      font-family: 'ttnorms-eb', sans-serif
+      margin: 64px 0 45px
+      span
+        display: block
+        font-family: 'ttnorms-m', sans-serif
+    .btn-default
+      width: 246px
+
+.payments__wrapper
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: flex-start
+  position: absolute
+  right: 15px
+  top: 21px
+
+.payments__box
+  box-shadow: 0 0 7px 1px #0a101a
+  background-color: $box-bg
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 333px
+  padding: 77px 42px 65px
+  box-sizing: border-box
+  h3
+    margin: 38px 0 19px
+    text-align: center
+    color: #ffffff
+    font-size: 22px
+    font-family: 'ttnorms-b', sans-serif
+  .description
+    text-align: center
+    font-size: 16px
+    color: #ffffff
+    font-family: 'ttnorms-l', sans-serif
+
+.payments__box.cashless__box
+  padding: 55px 42px 63px
+  width: 327px
+  margin: 0 0 0 37px
+  background-color: #121c2d
+  box-shadow: 0 0 7px 1px #0a101a
+
+
+//section stages
+.stages
+  background-color: $box-bg
+  border-top: 1px solid rgba(#fff, .1)
+  padding: 148px 0 110px
+  .container
+    flex-direction: column
+    h2
+      color: #efefef
+    .icon-arrow
+      margin: 0 0 30px 0
+      img
+        margin: 0 auto
+
+.stages__box
+  margin: 0 0 34px
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+  p
+    text-align: center
+    font-size: 18px
+  .icon
+    height: 82px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 0 30px
+
+
+.stages__wrapper
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-around
+  flex-wrap: wrap
+  margin: 113px 0 0 0
+
+
+//section project
+.project
+  background-color: #ffffff
+  padding: 84px 0 0 0
+  .container
+    flex-direction: column
+
+.project__slider
+  margin: 33px 0 0 0
+  min-height: 365px
+  .slick-track
+    display: flex
+    align-items: flex-end
+  .slide.slick-center
+    .project__box
+      opacity: 1
+      width: 516px
+      margin: 0 -30px
+      z-index: 2
+      position: relative
+      .image
+        width: 100%
+        padding: 19px
+      a
+        font-size: 18px
+  .slide
+   .project__box
+     width: 395px
+     opacity: .5
+     margin: 0 0 -67px 0
+     .image
+       padding: 0
+     a
+       font-size: 14px
+
+
+.project__box
+  display: flex
+  flex-direction: column
+  width: 516px
+  transition: 1s ease
+  a
+    font-size: 18px
+    text-transform: uppercase
+    font-family: 'ttnorms-m', sans-serif
+    margin: 0 auto 36px
+    color: rgba(#121c2d, .5)
+    &:hover
+      color: $border
+  .image
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+
+    box-sizing: border-box
+    position: relative
+    &:before
+      background: url("../img/laptop.png") no-repeat center top
+        size: cover
+      position: absolute
+      content: ''
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+    img
+      height: 100%
+      max-width: none
+      width: auto
+
+//section callback
+.callback
+  padding: 88px 0 84px
+  background-image: $bg
+  .container
+    flex-direction: column
+    h2
+      color: #efefef
+    p
+      font-size: 18px
+      margin: 20px 0 38px
+      color: #efefef
+
+.callback__form
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: flex-start
+  .label-message
+    width: 100%
+    height: 108px
+  label
+    width: 549px
+    height: 100%
+    margin: 0 0 19px
+  button
+    margin: 31px auto 0
+    .wrapper
+      padding: 12px 75px
+
+
+
+label
+  display: block
+
+
+input, textarea
+  border-radius: 21px
+  border: 2px solid rgba(#ffffff, .21)
+  background: transparent
+  padding: 0 30px
+  box-sizing: border-box
+  display: flex
+  align-items: center
+  width: 100%
+  height: 100%
+  &::placeholder
+    color: #efefef
+  &:hover
+    box-shadow: 1px 5px 7px 1px rgba($border, 0.14)
+
+input
+  height: 41px
+  font-size: 16px
+  font-family: $default-font
+
+textarea
+  padding: 13px 30px
+
+
+//footer
+footer
+  position: relative
+  .container
+    z-index: 100
+  .copyright
+    color: #ffffff
+    font-size: 14px
+    position: absolute
+    right: 15px
+    left: auto
+    bottom: 38px
+
+
+.contacts__box
+  background-color: #121c2d
+  padding: 114px 80px 80px 66px
+  min-height: 649px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  h2
+    font-size: 38px
+    color: #ffffff
+    margin: 0 0 69px
+  p
+    font-size: 20px
+  .phone
+    margin: 18px 0 9px
+    font-size: 24px
+    font-family: 'ttnorms-b', sans-serif
+    color: #ffffff
+    &:hover
+      color: $border
+  .mail
+    font-size: 20px
+    color: #ffffff
+    &:hover
+      color: $border
+  .social
+    display: flex
+    flex-direction: column
+    margin: 51px 0 0
+    p
+      font-size: 19px
+      font-family: 'ttnorms-b', sans-serif
+      color: #ffffff
+    .social__footer
+      display: flex
+      flex-direction: row
+      align-items: center
+      margin: 56px 0 0 0
+      li
+        margin: 0 4px 0 0
+        &:last-child
+          margin: 0
+        a
+          width: 33px
+          height: 33px
+          min-width: 33px
+          border-radius: 50%
+          background: $number2
+          display: flex
+          align-items: center
+          justify-content: center
+          color: #fff
+          &:hover
+            background: $border
+            color: $number
+
+#map
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 554px
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 99
+    opacity: .46
+    background: #273f68
+
+//modal
+.modal__div
+  position: fixed
+  width: 400px
+  height: 100%
+  top: 45%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 101
+  overflow: auto
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  display: none
+  opacity: 0
+  .modal__close
+    position: absolute
+    right: 10px
+    top: 10px
+    color: $border
+  .modal__wrapper
+    background: $bg
+    width: 100%
+    overflow: auto
+    margin: 50px auto
+    padding: 30px 40px
+    box-sizing: border-box
+    position: relative
+    h2
+      margin: 30px 0
+      font-size: 26px
+      color: #ffffff
+      text-align: center
+  .modal-form
+    flex-direction: column
+    align-items: center
+    width: 100%
+    label
+      width: 100%
+      height: 100%
+      margin: 0 0 20px
+      input
+        font-size: 14px
+        width: 100%
+        box-sizing: border-box
+      textarea
+        height: 100px
+        box-sizing: border-box
+        font-size: 14px
+    .btn-accent
+      margin: 10px auto
+
+.overlay
+  z-index: 100
+  position: fixed
+  background-color: #000
+  opacity: 0.8
+  -moz-opacity: 0.8
+  filter: alpha(opacity = 80)
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  cursor: pointer
+  display: none
+
+@import "media"
+// Всегда в конце

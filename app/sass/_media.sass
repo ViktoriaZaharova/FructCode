@@ -1,0 +1,417 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px)
+  .sentence .container
+    width: 100%
+
+@media only screen and (max-width : 1300px)
+  .container
+    width: 100%
+
+  .main
+    h1
+      max-width: 500px
+      font-size: 37px
+
+  .sentence .container .section-title
+    width: 100%
+    padding: 0
+
+  .advantages__box-text
+    margin: 0 70px 0 0
+    .description
+      font-size: 16px
+    h4
+      font-size: 20px
+
+  .advantages__box .number
+    margin: 0 20px 0 0
+    width: 32px
+    height: 32px
+    min-width: 32px
+    font-size: 20px
+
+  .advantages__box:nth-child(even)
+    padding: 0 0 0 50px
+
+
+@media only screen and (max-width : 1180px)
+  .list-sentence li
+    font-size: 14px
+    max-width: 80px
+    margin: 0 65px 0 0
+    &:before
+      right: -30px
+
+  .sentence, .our-customers, .callback
+    padding: 70px 0
+
+  .advantages
+    padding: 70px 0
+    .container
+      h2
+        margin: 0 0 70px 0
+
+  .payments__box
+    width: 300px
+    padding: 40px 35px
+
+  .payments__box.cashless__box
+    width: 280px
+
+    padding: 30px 25px
+
+  .payments
+    padding: 0 0 50px 0
+    .container
+      h2
+        margin: 40px 0
+        font-size: 34px
+
+  .callback__form
+    label
+      width: 400px
+
+
+@media only screen and (max-width : 1050px)
+  .logo
+    padding: 30px 40px 30px 0
+
+  header .container .phone
+    margin: 0
+
+  .line-sentence .container
+    padding: 30px 15px
+
+  .main__slider
+    position: relative
+    top: 0
+    right: 0
+    order: -1
+
+  .main__slider.slick-dotted.slick-slider
+    margin: 0 auto
+
+  .line-sentence .container
+    justify-content: center
+
+  .list-sentence
+    li
+      max-width: none
+
+  .main
+    h1
+      max-width: none
+      text-align: center
+      font-size: 34px
+      margin: 70px 0 30px
+      order: -2
+    .btn-default
+      order: 1
+      margin: 0 auto 30px
+    .slider-nav
+      margin: 30px auto
+
+  .our-customers .section-title
+    margin: 0 auto 70px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 960px)
+  .list-social
+    width: 100%
+    margin: 20px auto
+    justify-content: center
+
+  header
+    .container
+      .phone
+        margin: 0 auto 20px
+
+  .payments__wrapper
+    position: relative
+    right: 0
+    top: 0
+    justify-content: space-around
+
+
+  .payments
+    padding: 0
+    .container
+      flex-direction: column
+      padding: 0 15px 100px
+
+  .payments-left
+    h2
+      text-align: center
+      justify-content: center
+    .btn-default
+      position: absolute
+      left: 0
+      bottom: 20px
+      right: 0
+      margin: 0 auto
+
+  .payments__box.cashless__box, .payments__box
+    width: 45%
+    padding: 35px 25px
+    margin: 0
+    h3
+      margin: 30px 0 20px
+
+  .stages
+    padding: 70px 0
+
+  .stages__wrapper
+    margin: 70px 0 0 0
+
+  .callback
+    .container
+      h2
+        font-size: 36px
+
+  .callback__form label
+    width: 100%
+
+  .contacts__box
+    padding: 70px 40px
+    min-height: 535px
+    h2
+      margin: 0 0 30px
+      font-size: 34px
+
+  #map
+    height: 440px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 768px)
+  .sentence .container .btn-accent
+    margin: 40px auto 0
+
+  .sentence__slider-box
+    width: 290px
+    padding: 50px 20px
+    .number
+      font-size: 70px
+
+  .our-customers .section-title
+    margin: 0 auto 40px
+
+  .advantages__box
+    width: 100%
+    padding: 0 0 20px
+    border-right: none
+    margin: 0 0 20px
+    &:nth-child(even)
+      padding: 0
+
+  .advantages__box-text
+    margin: 0
+    padding: 0 0 20px
+    h4
+      margin: 0 0 25px
+
+  .payments__box.cashless__box h3, .payments__box h3
+    font-size: 20px
+
+
+  .project__box a
+    margin: 0 auto 20px
+
+  .project__slider
+    min-height: auto
+    .slide
+      .project__box
+        opacity: 1
+        width: 100%
+        margin: 0 auto
+        justify-content: center
+
+        .image
+          width: 400px
+          margin: 0 auto
+          img
+            max-width: 100%
+            height: auto
+            width: 95%
+
+@media (max-width: 620px)
+  .logo
+    font-size: 26px
+    padding: 20px 20px 20px 0
+
+
+  h2, .payments .container h2, .callback .container h2, .contacts__box h2
+    font-size: 30px
+    text-align: center
+
+  .sentence .container .section-title
+    margin: 0 auto 40px
+
+  .our-customers-arrows .slick-next, .sentence-arrows .slick-next
+    margin: 0 0 0 50px
+
+  .sentence .container h2
+    width: 250px
+
+  .sentence, .our-customers
+    padding: 50px 0
+
+  .payments__wrapper
+    flex-direction: column
+    align-items: center
+
+  .payments__box.cashless__box, .payments__box
+    width: 100%
+    margin: 0 0 20px
+
+  .stages__box
+    p
+      font-size: 14px
+    .icon
+      max-width: 40px
+      height: 45px
+
+  .project
+    padding: 50px 0 0
+
+  .contacts__box
+    min-height: auto
+    padding: 40px 30px 60px
+    p
+      font-size: 16px
+    .social
+      margin: 30px 0 0 0
+      p
+        font-size: 16px
+      .social__footer
+        margin: 30px 0 0 0
+    .phone
+      font-size: 20px
+
+  #map
+    height: 388px
+
+  footer
+    display: flex
+    flex-direction: column
+    .copyright
+      left: 50px
+      right: auto
+      bottom: 20px
+    .container
+      flex-direction: column
+      align-items: flex-start
+
+
+@media only screen and (max-width : 560px)
+  .schedule
+    flex-direction: column
+    width: 100%
+    order: 1
+    margin: 0 auto
+    p
+      margin: 0 0 10px
+
+  header .container .phone
+    order: 2
+    margin: 20px auto
+
+  .main__slider
+    width: 100%
+
+  .list-sentence
+    flex-direction: column
+    align-items: flex-start
+    li
+      margin: 0 0 60px
+      width: 100%
+      text-align: center
+      &:before
+        right: 0
+        left: 0
+        margin: 0 auto
+        top: 45px
+      &:last-child
+        margin: 0
+
+  .btn-default
+    font-size: 16px
+    max-width: 270px
+
+  .btn-accent
+    font-size: 16px
+
+  .modal__div .modal__wrapper h2
+    font-size: 20px
+
+  .stages__box
+    width: 40%
+
+
+  .icon-arrow
+    width: 10%
+
+  .stages__wrapper
+    .icon-arrow
+      &:nth-child(4)
+        display: none
+
+  .callback .container p
+    text-align: center
+    font-size: 16px
+
+@media (max-width: 440px)
+  .modal__div
+    width: 98%
+
+  .sentence, .our-customers
+    .container
+      .section-title
+        margin: 0 auto 20px
+      h2
+        width: 100%
+        text-align: center
+        margin: 0 auto 20px
+        max-width: none
+
+  .our-customers-arrows, .sentence-arrows
+    width: 100%
+    justify-content: center
+    align-items: center
+
+  .sentence__slider-box
+    width: 280px
+
+  .advantages .container h2
+    margin: 0 auto 40px
+    text-align: center
+
+  .project__slider
+    .slide
+      .project__box
+        .image
+          width: 100%
+
+
+  #map
+    position: relative
+    order: 1
+    height: 300px
+    margin: 0 auto
+
+  .contacts__box
+    width: 100%
+    p
+      font-size: 14px
+    .social
+      p
+        font-size: 14px
+
+  footer
+    padding: 0 15px
+    .container
+      padding: 0
